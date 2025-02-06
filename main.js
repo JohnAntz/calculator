@@ -60,6 +60,7 @@ function calculate() {
 function clearDisplay() {
   display.value = "";
   result = 0;
+  step = 0;
   firstNumber = null;
   secondNumber = null;
   operation = null;

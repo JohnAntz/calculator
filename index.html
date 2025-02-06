@@ -3,28 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script scr="main.js" defer></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <title>John's calculator</title>
   </head>
   <body>
-    <div id="digits">
-      <button class="0">0</button>
-      <button class="1">1</button>
-      <button class="2">2</button>
-      <button class="3">3</button>
-      <button class="4">4</button>
-      <button class="5">5</button>
-      <button class="6">6</button>
-      <button class="7">7</button>
-      <button class="8">8</button>
-      <button class="9">9</button>
-    </div>
-    <div id="operators">
-      <button class="add">+</button>
-      <button class="subtract">-</button>
-      <button class="multiply">x</button>
-      <button class="divide">/</button>
+    <div id="calculator">
+      <input id="display" readonly />
+      <div id="keys">
+        <button onclick="getOperator('+')" class="operator">+</button>
+        <button onclick="getNumber(7)">7</button>
+        <button onclick="getNumber(8)">8</button>
+        <button onclick="getNumber(9)">9</button>
+        <button onclick="getOperator('-')" class="operator">-</button>
+        <button onclick="getNumber(4)">4</button>
+        <button onclick="getNumber(5)">5</button>
+        <button onclick="getNumber(6)">6</button>
+        <button onclick="getOperator('*')" class="operator">*</button>
+        <button onclick="getNumber(1)">1</button>
+        <button onclick="getNumber(2)">2</button>
+        <button onclick="getNumber(3)">3</button>
+        <button onclick="getOperator('/')" class="operator">/</button>
+        <button onclick="getNumber(0)">0</button>
+        <button onclick="calculate('=')" class="calculate">=</button>
+        <button onclick="clearDisplay()" class="clear">C</button>
+      </div>
     </div>
   </body>
 </html>

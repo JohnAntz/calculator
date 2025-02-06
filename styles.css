@@ -62,3 +62,14 @@ button:active {
 .operator:active {
   background-color: hsl(217, 75%, 80%);
 }
+
+.clear {
+  background-color: hsl(217, 75%, 50%);
+  color: white;
+}
+.clear:hover {
+  background-color: hsl(217, 75%, 60%);
+}
+.clear:active {
+  background-color: hsl(217, 75%, 80%);
+}

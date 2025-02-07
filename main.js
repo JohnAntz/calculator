@@ -1,5 +1,9 @@
 const display = document.getElementById("display");
 const keys = document.getElementById("keys");
+const operators = document.querySelectorAll(".operator");
+const digits = document.querySelectorAll(".digit");
+const equal = document.querySelector(".equal");
+const clear = document.querySelector(".clear");
 
 let step = 0;
 let firstNumber;
@@ -25,6 +29,26 @@ const divide = function (a, b) {
   const result = a / b;
   return result;
 };
+
+digits.forEach((digit) => {
+  digit.addEventListener("click", () => {
+    getNumber(digit.innerText);
+  });
+});
+
+operators.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    getOperator(operator.innerText);
+  });
+});
+
+clear.addEventListener("click", () => {
+  clearDisplay();
+});
+
+equal.addEventListener("click", () => {
+  calculate();
+});
 
 function getNumber(num) {
   if (step === 0 || step === 1) {

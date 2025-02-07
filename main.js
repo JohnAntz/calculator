@@ -63,8 +63,16 @@ function getNumber(num) {
   }
 }
 function getOperator(op) {
-  step = 2;
-  operation = op;
+  if (step === 0 || step === 1) {
+    step = 2;
+    operation = op;
+  } else if (step === 2) {
+    calculate();
+    firstNumber = result;
+    secondNumberArray = [];
+    secondNumber = null;
+    operation = op;
+  }
 }
 function calculate() {
   if (operation === "+") {

@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: hsl(0, 0%, 15%);
-  max-width: 50%;
+  max-width: 50vh;
   padding: 10px;
   border-radius: 20px;
   overflow: hidden;
